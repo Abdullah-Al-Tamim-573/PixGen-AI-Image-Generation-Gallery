@@ -11,9 +11,9 @@ export default  function Home() {
   return (
     <>
          <h2 className="text-3xl font-bold my-2">Top Generations</h2>
-         <div className="grid grid-cols-3 gap-5 justify-items-center my-5">
+         <div className="grid grid-cols-4 gap-5 justify-items-center my-5">
                {
-                   photosData.map(photoData => <SinglePhotoData key={photoData.id} photoData={photoData}></SinglePhotoData>)
+                   photosData.slice(0,8).map(photoData => <SinglePhotoData key={photoData.id} photoData={photoData}></SinglePhotoData>)
                }
          </div>
     </>
