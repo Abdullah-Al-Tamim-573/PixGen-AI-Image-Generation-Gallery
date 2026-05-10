@@ -47,7 +47,7 @@ const Navbar = () => {
         <div className="flex gap-4">
           <ul className="flex items-center gap-3  text-sm">
             {
-              userData.data?.user ? <Image className="rounded-full" alt="userImg" width={90} height={50} src={userData.data?.user.image}></Image>: ''
+              userData.data?.user ? <Image  referrerPolicy='no-referrer' className="rounded-full" alt="userImg" width={90} height={50} src={userData.data?.user.image}></Image>: ''
             }
             {
               userData.data?.user ? 
