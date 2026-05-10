@@ -9,6 +9,11 @@ const Navbar = () => {
   let userData = authClient.useSession();
   console.log(userData.data?.user)
 
+
+  let handleSignOut = async() => {
+       await authClient.signOut();
+  }
+
   return (
     <div className="border-b px-2">
       <nav className=" flex justify-between items-center  py-3 max-w-7xl mx-auto w-full">
@@ -47,7 +52,7 @@ const Navbar = () => {
             {
               userData.data?.user ? 
                <li>
-                     <Button variant="danger">LogOut</Button>
+                     <Button onClick={handleSignOut} variant="danger">LogOut</Button>
                  </li> 
             : (<>
                   <li>
